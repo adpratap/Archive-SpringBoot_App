@@ -9,5 +9,10 @@ public interface ArchiveService {
     public List<Archive> getAllArchives();
 
     public Archive saveArchive(Archive archive);
+    public void deleteArchive(Long id);
+
+    public void deleteAllArchive();
+
+    public Archive getByIdArchive(Long id);
 
 }
