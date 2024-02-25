@@ -8,8 +8,8 @@ import jakarta.persistence.Id;
 @Entity
 public class Archive {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String title;
     private String body;
     private String timestamp;
@@ -17,7 +17,7 @@ public class Archive {
     public Archive() {
     }
 
-    public Archive(Long id, String title, String body, String timestamp) {
+    public Archive(int id, String title, String body, String timestamp) {
         this.id = id;
         this.title = title;
         this.body = body;
@@ -40,11 +40,11 @@ public class Archive {
                 '}';
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

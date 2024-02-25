@@ -36,8 +36,7 @@ public class ArchiveController {
 
     @PostMapping("/save")
     public String addArchive(@ModelAttribute Archive archive) {
-        Long size = (long) service.getAllArchives().size();
-        archive.setId(++size);
+        System.out.println(archive);
         service.saveArchive(archive);
         return "redirect:/";
     }
